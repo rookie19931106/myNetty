@@ -7,12 +7,10 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 
-import java.nio.charset.Charset;
-
 /**
  * @author jay
- * @date 2019/7/24 0:26
- * 自定义处理器
+ * @date 2019/7/30 21:53
+ * 自定义的http处理器
  */
 public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
 
