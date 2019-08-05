@@ -1,6 +1,5 @@
 package com.jay.netty.firstHead.boardcast;
 
-import com.jay.netty.firstHead.socket.MyServerInitalizer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;

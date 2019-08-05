@@ -11,18 +11,19 @@ import io.netty.util.CharsetUtil;
 
 /**
  * @author jay
- * @date 2019/8/3 23:32
- * 聊天处理器
+ * @date 2019/8/5 21:17
  */
-public class MyChatServerInitializer extends ChannelInitializer<SocketChannel> {
+public class MyChatInitializer extends ChannelInitializer<SocketChannel> {
+
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
+
         ChannelPipeline pipeline = ch.pipeline();
         //根据分割符进行解析
         pipeline.addLast(new DelimiterBasedFrameDecoder(4096, Delimiters.lineDelimiter()));
         pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
         pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
         //自定义的解码器
-        pipeline.addLast(new MyChatServerHandler());
+        pipeline.addLast(new MyChatHandler());
     }
 }
